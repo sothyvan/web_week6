@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Form Challenges</title>
+    <link rel="stylesheet" href="pratice_form.css">
+</head>
+<body>
+    <h1>CSS Form Challenges</h1>
+
+    <!-- Challenge 1: Highlight input field when focused -->
+    <div class="challenge">
+        <h2>1. Highlight Input Field When Focused</h2>
+        <input type="text" class="input" placeholder="Click me to see focus effect">
+    </div>
+
+    <!-- Challenge 2: Change button background color on hover -->
+    <div class="challenge">
+        <h2>2. Change Button Background Color on Hover</h2>
+        <button class="hover_button">Hover Over Me</button>
+    </div>
+
+    <!-- Challenge 3: Search bar with rounded corners and shadow -->
+    <div class="challenge">
+        <h2>3. Search Bar with Rounded Corners and Shadow</h2>
+        <input type="search" class="search_bar" placeholder="Search...">
+    </div>
+
+    <!-- Challenge 4: Different style when checkbox is checked -->
+    <div class="challenge">
+        <h2>4. Different Style When Checkbox is Checked</h2>
+        <label class="checkbox_label">
+            <input type="checkbox" class="styled_checkbox">
+            <span class="checkbox"></span>
+            <span class="checkbox_text">Checkbox</span>
+        </label>
+    </div>
+
+    <!-- Challenge 5: Style a checkbox to have 3 states -->
+    <div class="challenge">
+        <h2>5. Three states of checkbox</h2>
+        <p>Select a state:</p>
+        
+        <input type="radio" name="state" id="radio-unchecked" class="state-radio" checked>
+        <input type="radio" name="state" id="radio-checked" class="state-radio">
+        <input type="radio" name="state" id="radio-indeterminate" class="state-radio">
+        
+        <label for="radio-unchecked" class="state-option">
+            <span class="state-display"></span>
+            Unchecked State
+        </label>
+        
+        <label for="radio-checked" class="state-option">
+            <span class="state-display"></span>
+            Checked State
+        </label>
+        
+        <label for="radio-indeterminate" class="state-option">
+            <span class="state-display"></span>
+            Indeterminate State
+        </label>
+        
+        <div class="demo-box">
+            <div class="demo-checkbox"></div>
+            <span class="demo-label">Checkbox</span>
+        </div>
+    </div>
+    
+</body>
+</html>

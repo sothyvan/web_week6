@@ -1,0 +1,261 @@
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.challenge {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #4a90e2;
+    padding-bottom: 10px;
+}
+
+/* Challenge 1: Highlight input field when focused */
+.input {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    width: 200px;
+}
+
+.input:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
+    outline: none;
+    background-color: #f8fdff;
+}
+
+/* Challenge 2: Change button background color on hover */
+.hover_button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hover_button:hover {
+    background-color: green;
+    transform: translateY(-2px);
+}
+
+.hover_button:active {
+    transform: translateY(0);
+}
+
+/* Challenge 3: Search bar with rounded corners and shadow */
+.search_bar {
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    width: 300px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.search_bar:focus {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    outline: none;
+}
+
+/* Challenge 4: Different style when checkbox is checked */
+.styled_checkbox {
+    display: none;
+}
+
+.checkbox_label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.styled_checkbox:checked + .checkbox {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+}
+
+.styled_checkbox:checked + .checkbox::after {
+    content: '✓';
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+
+.styled_checkbox:checked ~ .checkbox_text {
+    color: #4a90e2;
+    font-weight: bold;
+}
+
+/* Challenge 5: Style a checkbox to have 3 states */
+.state-radio {
+    display: none;
+}
+
+p{
+    padding-bottom: 10px;
+}
+
+.state-option {
+    margin: 15px 0;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.state-option:hover {
+    background-color: #f9f9f9;
+}
+
+/* Custom checkbox display */
+.state-display {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #666;
+    border-radius: 3px;
+    margin-right: 10px;
+    position: relative;
+    vertical-align: middle;
+}
+
+/* Unchecked state */
+#radio-unchecked:checked ~ [for="radio-unchecked"] .state-display {
+    background-color: white;
+    border-color: #666;
+}
+
+#radio-unchecked:checked ~ [for="radio-unchecked"] .state-display::after {
+    content: '';
+}
+
+/* Checked state */
+#radio-checked:checked ~ [for="radio-checked"] .state-display {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+}
+
+#radio-checked:checked ~ [for="radio-checked"] .state-display::after {
+    content: '✓';
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* Indeterminate state */
+#radio-indeterminate:checked ~ [for="radio-indeterminate"] .state-display {
+    background-color: #ffa500;
+    border-color: #ffa500;
+}
+
+#radio-indeterminate:checked ~ [for="radio-indeterminate"] .state-display::after {
+    content: '–';
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Visual demo box */
+.demo-box {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.demo-checkbox {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #666;
+    border-radius: 4px;
+    position: relative;
+    background-color: white;
+}
+
+/* Apply states to demo box based on selected radio */
+#radio-unchecked:checked ~ .demo-box .demo-checkbox {
+    background-color: white;
+    border-color: #666;
+}
+
+#radio-unchecked:checked ~ .demo-box .demo-checkbox::after {
+    content: '';
+}
+
+#radio-checked:checked ~ .demo-box .demo-checkbox {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+}
+
+#radio-checked:checked ~ .demo-box .demo-checkbox::after {
+    content: '✓';
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+
+#radio-indeterminate:checked ~ .demo-box .demo-checkbox {
+    background-color: #ffa500;
+    border-color: #ffa500;
+}
+
+#radio-indeterminate:checked ~ .demo-box .demo-checkbox::after {
+    content: '–';
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.demo-label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
